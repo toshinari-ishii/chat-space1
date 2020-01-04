@@ -1,0 +1,32 @@
+.chat-main
+  .chat-main__header
+    .chat-main__header__leftbox
+      .chat-main__header__leftbox__main
+        %h2 Hello
+      .chat-main__header__leftbox__main__bottom
+        %ul Member&thinsp;:&thinsp;
+        .chat-main__header__leftbox_bottom_right
+          %li abc
+    = link_to "#", class:"edit" do
+      .chat-main__btn
+        Edit
+        
+  .chat-main__message
+    .chat-main__message__info
+      .chat-main__message__info__box
+        .chat-main__message__info__box__talk
+          ABC
+        .chat-main__message__info__box__date
+          2019/12/26/(thu)&thinsp;20:00:00
+      .chat-main__message__text
+      %p aaaaa
+
+  .form
+    .form__new__message
+      .new-message
+        .input-box
+          %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type:"text"}/
+          %input.submit-btn{name: "commit", type: "submit", value: "Send"}
+          %label{class: "input-box__image"}
+            = icon( "far fa-image", class: "imeage")
+            %input{ type: "file", class: "hidden" }
