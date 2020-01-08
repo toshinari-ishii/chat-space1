@@ -14,8 +14,8 @@
   .side_bar__contents
     - current_user.groups.each do |group|
       .side_bar__contents__textbox
-        = link_to '#',class:"text" do
+        = link_to group_messages_path(group) do
           .side_bar__contents__textbox__title
             = group.name
           .side_bar__contents__textbox__message
-            -# = group.show_last_message
+            = group.show_last_message
