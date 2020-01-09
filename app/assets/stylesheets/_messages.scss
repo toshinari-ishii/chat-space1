@@ -60,12 +60,9 @@
             margin-top: 5px;
             color: white;
           }
-          .text {
-            color: #FFFFFF;
-            font-size: 15px;
-          }
         }
       }
+    
     }
 //   .chat-main{
 //     width: calc(100vw - 300px);
@@ -181,4 +178,9 @@
 //    }
 //   }
 //  } 
+}
+.text {
+  color: #FFFFFF;
+  font-size: 15px;
+  text-decoration: none;
 }
