@@ -74,18 +74,18 @@ var reloadMessages = function() {
   })
   .done(function(messages) {
     if (messages.length !== 0) {
-    var insertHTML = '';
-    $.each(messages, function(i, message) {
-      insertHTML += buildHTML(message)
-    });
-    $('.messages').append(insertHTML);
-    $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-    $("#new_message")[0].reset();
-    $(".form__submit").prop("disabled", false);
-   }
+      var insertHTML = '';
+      $.each(messages, function(i, message) {
+        insertHTML += buildHTML(message)
+      });
+      $('.messages').append(insertHTML);
+      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+      $("#new_message")[0].reset();
+      $(".form__submit").prop("disabled", false);
+    }
   })
   .fail(function() {
-    console.log('error');
+    alert('error');
   });
  };
   var buildHTML = function(message) {
@@ -139,7 +139,7 @@ var reloadMessages = function() {
     };
     return html;
   };
-  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
-  setInterval(reloadMessages, 7000);
-  }
+    if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+      setInterval(reloadMessages, 7000);
+    }
 });
