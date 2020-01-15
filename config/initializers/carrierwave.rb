@@ -13,5 +13,5 @@ CarrierWave.configure do |config|
   }
 
   config.fog_directory  = 'toshinarichatspaceimage'
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/toshinarichatspaceimagevim ~/.zshrc'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/toshinarichatspaceimage'
 end
